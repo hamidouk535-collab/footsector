@@ -3,53 +3,34 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>FootSector ⚽</title>
+<meta name="description" content="FootSector — maillots de football. Sans flocage 30 €, avec flocage 35 €.">
+<title>FootSector ⚽ | Maillots de football</title>
 <style>
-body{margin:0;font-family:Arial,sans-serif;color:#111;background:#fff}
-header{background:#080808;color:#fff;padding:18px 6%;display:flex;justify-content:space-between;align-items:center}
-.logo{font-size:26px;font-weight:900}.logo span{color:#18bfff}
-nav a{color:#fff;text-decoration:none;margin-left:25px;font-weight:bold}
-.hero{padding:80px 20px;text-align:center;background:linear-gradient(135deg,#07111f,#0b8dcc);color:#fff}
-.hero h1{font-size:48px;margin:0 0 15px}.hero p{font-size:20px}
-.btn{display:inline-block;padding:13px 22px;background:#12b9f2;color:#061018;text-decoration:none;border-radius:7px;font-weight:bold}
-section{max-width:1100px;margin:auto;padding:45px 20px}
-h2{text-align:center;font-size:32px}
-.products{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:22px}
-.card{border:1px solid #ddd;border-radius:12px;overflow:hidden}
-.photo{height:280px;background:#eee;display:flex;align-items:center;justify-content:center;color:#777}
-.info{padding:16px}.price{font-size:21px;font-weight:bold;margin:12px 0}
-footer{background:#080808;color:white;text-align:center;padding:35px}
-@media(max-width:650px){nav{display:none}.hero h1{font-size:36px}}
+:root{--blue:#18bfff;--dark:#07090d;--card:#fff;--muted:#667085}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:Arial,Helvetica,sans-serif;color:#111;background:#f5f7fa}header{position:sticky;top:0;z-index:20;background:rgba(7,9,13,.96);color:#fff;padding:16px 6%;display:flex;justify-content:space-between;align-items:center;backdrop-filter:blur(10px)}.logo{font-size:27px;font-weight:900}.logo span{color:var(--blue)}nav a{color:#fff;text-decoration:none;margin-left:24px;font-weight:700}.hero{padding:85px 20px 75px;text-align:center;background:linear-gradient(135deg,#07111f,#087bb3 65%,#18bfff);color:#fff}.hero h1{font-size:52px;margin:0 0 12px}.hero p{font-size:20px;margin:0 auto 25px;max-width:650px}.btn{display:inline-block;padding:13px 22px;background:var(--blue);color:#061018;text-decoration:none;border-radius:9px;font-weight:800;border:0;cursor:pointer}.btn.dark{background:#101318;color:#fff}.prices{display:flex;gap:16px;justify-content:center;flex-wrap:wrap;margin:30px auto 0}.pill{background:rgba(255,255,255,.13);border:1px solid rgba(255,255,255,.25);padding:12px 18px;border-radius:999px;font-weight:700}section{max-width:1200px;margin:auto;padding:55px 20px}h2{text-align:center;font-size:34px;margin:0 0 12px}.subtitle{text-align:center;color:var(--muted);margin:0 auto 30px}.products{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:22px}.card{background:var(--card);border:1px solid #e3e7ed;border-radius:15px;overflow:hidden;box-shadow:0 6px 22px rgba(0,0,0,.06);transition:.2s}.card:hover{transform:translateY(-4px);box-shadow:0 12px 30px rgba(0,0,0,.10)}.photo{height:330px;background:#eee;display:flex;align-items:center;justify-content:center;overflow:hidden}.photo img{width:100%;height:100%;object-fit:cover}.info{padding:17px}.team{font-size:18px;font-weight:800}.price{font-size:22px;font-weight:900;margin:8px 0;color:#0b6f9c}.choice{font-size:13px;color:var(--muted);margin-bottom:13px}.info .btn{width:100%;text-align:center}.notice{background:#fff;border:1px solid #e3e7ed;border-radius:15px;padding:22px;margin-top:28px;color:#333}.contact{background:#0b1018;color:#fff;border-radius:20px;text-align:center}.contact p{color:#cbd5e1}.contact .btn{margin-top:8px}footer{background:#07090d;color:#fff;text-align:center;padding:35px 20px}footer p{color:#9ca3af}.legal{font-size:12px;color:#9ca3af;max-width:800px;margin:20px auto 0;line-height:1.5}@media(max-width:650px){nav{display:none}.hero h1{font-size:39px}.photo{height:300px}}
 </style>
 </head>
 <body>
-<header>
-<div class="logo">Foot<span>Sector</span></div>
-<nav><a href="#boutique">Boutique</a><a href="#nouveautes">Nouveautés</a><a href="#contact">Contact</a></nav>
-</header>
-<div class="hero">
-<h1>FootSector ⚽</h1>
-<p>Les maillots qui représentent ta passion.</p>
-<a class="btn" href="#boutique">Découvrir les maillots</a>
-</div>
-<section id="boutique">
-<h2>🔥 Maillots populaires</h2>
-<div class="products">
-<div class="card"><div class="photo">TA PHOTO ICI</div><div class="info"><b>Maillot de football</b><div class="price">Prix à définir</div><a class="btn" href="#contact">Commander</a></div></div>
-<div class="card"><div class="photo">TA PHOTO ICI</div><div class="info"><b>Maillot de football</b><div class="price">Prix à définir</div><a class="btn" href="#contact">Commander</a></div></div>
-</div>
-</section>
-<section id="nouveautes">
-<h2>🆕 Nouveautés</h2>
-<div class="products">
-<div class="card"><div class="photo">PHOTO À AJOUTER</div><div class="info"><b>Nouveau maillot</b><div class="price">Prix à définir</div></div></div>
-<div class="card"><div class="photo">PHOTO À AJOUTER</div><div class="info"><b>Nouveau maillot</b><div class="price">Prix à définir</div></div></div>
-</div>
-</section>
-<section id="contact">
-<h2>📲 Commander</h2>
-<p style="text-align:center">Les informations de commande, les tailles et les moyens de paiement seront ajoutés ici.</p>
-</section>
-<footer><h3>FootSector ⚽</h3><p>Maillots de football • Qualité • Passion</p></footer>
-</body>
-</html>
+<header><div class="logo">Foot<span>Sector</span></div><nav><a href="#boutique">Boutique</a><a href="#tarifs">Tarifs</a><a href="#contact">Commander</a></nav></header>
+<div class="hero"><h1>FootSector ⚽</h1><p>Les maillots qui représentent ta passion.</p><a class="btn" href="#boutique">Découvrir les maillots</a><div class="prices"><div class="pill">👕 Sans flocage — 30 €</div><div class="pill">🔥 Avec flocage — 35 €</div></div></div>
+<section id="boutique"><h2>🔥 Notre boutique</h2><p class="subtitle">Choisis ton maillot, puis sélectionne avec ou sans flocage.</p><div class="products">
+<!-- Produits -->
+<div class="card"><div class="photo"><img src="images/real_madrid.jpg" alt="Maillot Real Madrid"></div><div class="info"><div class="team">Real Madrid</div><div class="price">30 € / 35 €</div><div class="choice">Sans flocage / Avec flocage</div><a class="btn" href="#contact">Commander</a></div></div>
+<div class="card"><div class="photo"><img src="images/manchester_city.jpg" alt="Maillot Manchester City"></div><div class="info"><div class="team">Manchester City</div><div class="price">30 € / 35 €</div><div class="choice">Sans flocage / Avec flocage</div><a class="btn" href="#contact">Commander</a></div></div>
+<div class="card"><div class="photo"><img src="images/arsenal.jpg" alt="Maillot Arsenal"></div><div class="info"><div class="team">Arsenal</div><div class="price">30 € / 35 €</div><div class="choice">Sans flocage / Avec flocage</div><a class="btn" href="#contact">Commander</a></div></div>
+<div class="card"><div class="photo"><img src="images/liverpool.jpg" alt="Maillot Liverpool"></div><div class="info"><div class="team">Liverpool</div><div class="price">30 € / 35 €</div><div class="choice">Sans flocage / Avec flocage</div><a class="btn" href="#contact">Commander</a></div></div>
+<div class="card"><div class="photo"><img src="images/newcastle.jpg" alt="Maillot Newcastle"></div><div class="info"><div class="team">Newcastle</div><div class="price">30 € / 35 €</div><div class="choice">Sans flocage / Avec flocage</div><a class="btn" href="#contact">Commander</a></div></div>
+<div class="card"><div class="photo"><img src="images/juventus.jpg" alt="Maillot Juventus"></div><div class="info"><div class="team">Juventus</div><div class="price">30 € / 35 €</div><div class="choice">Sans flocage / Avec flocage</div><a class="btn" href="#contact">Commander</a></div></div>
+<div class="card"><div class="photo"><img src="images/bayern.jpg" alt="Maillot Bayern Munich"></div><div class="info"><div class="team">Bayern Munich</div><div class="price">30 € / 35 €</div><div class="choice">Sans flocage / Avec flocage</div><a class="btn" href="#contact">Commander</a></div></div>
+<div class="card"><div class="photo"><img src="images/manchester_united.jpg" alt="Maillot Manchester United"></div><div class="info"><div class="team">Manchester United</div><div class="price">30 € / 35 €</div><div class="choice">Sans flocage / Avec flocage</div><a class="btn" href="#contact">Commander</a></div></div>
+<div class="card"><div class="photo"><img src="images/barcelone.jpg" alt="Maillot FC Barcelone"></div><div class="info"><div class="team">FC Barcelone</div><div class="price">30 € / 35 €</div><div class="choice">Sans flocage / Avec flocage</div><a class="btn" href="#contact">Commander</a></div></div>
+<div class="card"><div class="photo"><img src="images/lyon.jpg" alt="Maillot Olympique Lyonnais"></div><div class="info"><div class="team">Olympique Lyonnais</div><div class="price">30 € / 35 €</div><div class="choice">Sans flocage / Avec flocage</div><a class="btn" href="#contact">Commander</a></div></div>
+<div class="card"><div class="photo"><img src="images/atletico.jpg" alt="Maillot Atlético Madrid"></div><div class="info"><div class="team">Atlético Madrid</div><div class="price">30 € / 35 €</div><div class="choice">Sans flocage / Avec flocage</div><a class="btn" href="#contact">Commander</a></div></div>
+<div class="card"><div class="photo"><img src="images/brighton.jpg" alt="Maillot Brighton"></div><div class="info"><div class="team">Brighton</div><div class="price">30 € / 35 €</div><div class="choice">Sans flocage / Avec flocage</div><a class="btn" href="#contact">Commander</a></div></div>
+<div class="card"><div class="photo"><img src="images/galatasaray.jpg" alt="Maillot Galatasaray"></div><div class="info"><div class="team">Galatasaray</div><div class="price">30 € / 35 €</div><div class="choice">Sans flocage / Avec flocage</div><a class="btn" href="#contact">Commander</a></div></div>
+<div class="card"><div class="photo"><img src="images/ajax.jpg" alt="Maillot Ajax"></div><div class="info"><div class="team">Ajax</div><div class="price">30 € / 35 €</div><div class="choice">Sans flocage / Avec flocage</div><a class="btn" href="#contact">Commander</a></div></div>
+</div></section>
+<section id="tarifs"><h2>💶 Tarifs</h2><div class="products"><div class="card"><div class="info"><div class="team">Maillot sans flocage</div><div class="price">30 €</div><p>Le maillot seul.</p></div></div><div class="card"><div class="info"><div class="team">Maillot avec flocage</div><div class="price">35 €</div><p>Maillot + flocage.</p></div></div></div><div class="notice">📦 Les frais de livraison et les modalités de commande seront ajoutés dès que tu me donnes les informations définitives.</div></section>
+<section id="contact"><div class="contact"><h2>📲 Commander</h2><p>Les informations de contact et de paiement seront ajoutées ici.</p><a class="btn" href="#">Me contacter</a></div></section>
+<footer><h3>FootSector ⚽</h3><p>Maillots de football • Qualité • Passion</p><div class="legal">Les produits et visuels utilisés sur le site doivent être commercialisés avec les droits et autorisations nécessaires. Les mentions légales, conditions de vente et informations de livraison seront ajoutées avant la mise en ligne commerciale.</div></footer>
+</body></html>
