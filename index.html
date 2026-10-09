@@ -39,7 +39,30 @@ footer{margin-top:55px;background:var(--navy);color:white;padding:35px 6%}footer
 <div class="drawer" id="drawer"><div class="drawer-head"><h2>Ton panier</h2><button class="close" style="position:static" onclick="fermerPanier()">×</button></div><div class="drawer-body" id="items"></div><div class="cart-bottom"><div class="total"><span>Total produits</span><span id="total">0 €</span></div><button class="btn" onclick="checkout()">Préparer ma commande</button><div class="checkout" id="checkout"><label for="client">Nom du client</label><input id="client" placeholder="Prénom et nom"><label for="contact">E-mail ou téléphone</label><input id="contact" placeholder="Pour te recontacter"><label for="adresse">Ville/adresse (facultatif)</label><input id="adresse" placeholder="Livraison à confirmer"><label for="message">Message (facultatif)</label><textarea id="message" rows="2"></textarea><button class="btn" style="width:100%" onclick="recap()">Créer le récapitulatif</button><textarea id="summary" rows="9" readonly style="display:none;margin-top:10px;width:100%"></textarea><button class="btn" id="copy" style="display:none;width:100%;margin-top:8px" onclick="copier()">Copier le récapitulatif</button></div></div></div>
 <script>
 const produits=[
-["Real Madrid","real_madrid.jpg","Europe"],["Manchester City","manchester_city.jpg","Europe"],["Arsenal","arsenal.jpg","Europe"],["Liverpool","liverpool.jpg","Europe"],["Newcastle","newcastle.jpg","Europe"],["Juventus","juventus.jpg","Europe"],["Bayern Munich","bayern.jpg","Europe"],["Manchester United","manchester_united.jpg","Europe"],["FC Barcelone","barcelone.jpg","Europe"],["Olympique Lyonnais","lyon.jpg","Europe"],["Atlético Madrid","atletico.jpg","Europe"],["Brighton","brighton.jpg","Europe"],["Galatasaray","galatasaray.jpg","Autres"],["Ajax","ajax.jpg","Europe"]];
+["Ajax","ajax.jpg","Europe"],
+["Arsenal","arsenal.jpg","Europe"],
+["Arsenal — Champions","arsenal_champions.jpg","Europe"],
+["Arsenal — Extérieur","arsenal_exterieur.jpg","Europe"],
+["Atlético Madrid","atletico.jpg","Europe"],
+["FC Barcelone","barcelone.jpg","Europe"],
+["FC Barcelone — Noir","barcelone_noir.jpg","Europe"],
+["Bayern Munich","bayern.jpg","Europe"],
+["Brighton","brighton.jpg","Europe"],
+["Galatasaray","galatasaray.jpg","Autres"],
+["Galatasaray — Jaune","galatasaray_jaune.jpg","Autres"],
+["Inter Milan","inter.jpg","Europe"],
+["Juventus","juventus.jpg","Europe"],
+["Liverpool","liverpool.jpg","Europe"],
+["Olympique Lyonnais","lyon.jpg","Europe"],
+["Manchester City","manchester_city.jpg","Europe"],
+["Manchester City — Noir","manchester_city_noir.jpg","Europe"],
+["Manchester United","manchester_united.jpg","Europe"],
+["Manchester United — Bleu","manchester_united_bleu.jpg","Europe"],
+["AC Milan","milan.jpg","Europe"],
+["Newcastle","newcastle.jpg","Europe"],
+["Real Madrid","real_madrid.jpg","Europe"],
+["Real Madrid — Blanc","real_madrid_blanc.jpg","Europe"],
+["Real Madrid — Bordeaux","real_madrid_bordeaux.jpg","Europe"]];
 let current=null,cart=[];
 function render(filter="Tous"){const g=document.getElementById("grid");g.innerHTML="";produits.filter(p=>filter==="Tous"||p[2]===filter).forEach(p=>{let c=document.createElement("article");c.className="card";c.innerHTML=`<div class="photo" onclick="ouvrirDetail('${p[0]}')"><span class="badge">PERSONNALISABLE</span><img src="${p[1]}" alt="Maillot ${p[0]}" onerror="this.style.display='none';this.parentElement.insertAdjacentHTML('beforeend','<span style=&quot;position:absolute;color:#667085;font-weight:bold;padding:12px;text-align:center&quot;>Photo à ajouter<br>${p[0]}</span>')"></div><div class="info"><div class="team">${p[0]}</div><div class="meta">Tailles S à XXL</div><div class="price">30 € <small>sans flocage</small><br>35 € <small>avec flocage</small></div><div class="buttons"><button onclick="ouvrirDetail('${p[0]}')">Voir le maillot</button><button class="outline" onclick="ouvrirDetail('${p[0]}')">Personnaliser</button></div></div>`;g.appendChild(c)})}
 document.querySelectorAll(".filter").forEach(b=>b.onclick=()=>{document.querySelectorAll(".filter").forEach(x=>x.classList.remove("active"));b.classList.add("active");render(b.dataset.filter)});
