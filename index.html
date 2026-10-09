@@ -30,7 +30,114 @@
 <div class="card"><div class="photo"><img src="galatasaray.jpg" alt="Maillot Galatasaray"></div><div class="info"><div class="team">Galatasaray</div><div class="price">30 € / 35 €</div><div class="choice">Sans flocage / Avec flocage</div><a class="btn" href="#contact">Commander</a></div></div>
 <div class="card"><div class="photo"><img src="ajax.jpg" alt="Maillot Ajax"></div><div class="info"><div class="team">Ajax</div><div class="price">30 € / 35 €</div><div class="choice">Sans flocage / Avec flocage</div><a class="btn" href="#contact">Commander</a></div></div>
 </div></section>
-<section id="tarifs"><h2>💶 Tarifs</h2><div class="products"><div class="card"><div class="info"><div class="team">Maillot sans flocage</div><div class="price">30 €</div><p>Le maillot seul.</p></div></div><div class="card"><div class="info"><div class="team">Maillot avec flocage</div><div class="price">35 €</div><p>Maillot + flocage.</p></div></div></div><div class="notice">📦 Les frais de livraison et les modalités de commande seront ajoutés dès que tu me donnes les informations définitives.</div></section>
+<section id="commande">
+<h2>👕 Personnalise ta commande</h2>
+<p class="subtitle">Choisis ton maillot et personnalise ton flocage !</p>
+
+<div class="notice">
+<form id="order-form">
+
+<label for="team">Choisis ton maillot :</label><br>
+<select id="team" required>
+<option value="">Choisir un maillot</option>
+<option>Real Madrid</option>
+<option>Manchester City</option>
+<option>Arsenal</option>
+<option>Liverpool</option>
+<option>Newcastle</option>
+<option>Juventus</option>
+<option>Bayern Munich</option>
+<option>Manchester United</option>
+<option>FC Barcelone</option>
+<option>Olympique Lyonnais</option>
+<option>Atlético Madrid</option>
+<option>Brighton</option>
+<option>Galatasaray</option>
+<option>Ajax</option>
+</select>
+
+<br><br>
+
+<label for="size">Taille :</label><br>
+<select id="size" required>
+<option value="">Choisir une taille</option>
+<option>S</option>
+<option>M</option>
+<option>L</option>
+<option>XL</option>
+<option>XXL</option>
+</select>
+
+<br><br>
+
+<label for="flocage">Flocage :</label><br>
+<select id="flocage" required>
+<option value="non">Sans flocage — 30 €</option>
+<option value="oui">Avec flocage — 35 €</option>
+</select>
+
+<div id="details-flocage" style="display:none;margin-top:15px">
+<label for="nom">Nom à floquer :</label><br>
+<input id="nom" type="text" maxlength="16" placeholder="Exemple : KONATE">
+
+<br><br>
+
+<label for="numero">Numéro à floquer :</label><br>
+<input id="numero" type="number" min="0" max="99" placeholder="Exemple : 10">
+</div>
+
+<h3>Prix : <span id="prix">30 €</span></h3>
+
+<button class="btn" type="submit">Préparer ma commande</button>
+
+<div id="recapitulatif" style="display:none;white-space:pre-wrap;margin-top:20px"></div>
+
+</form>
+</div>
+</section>
+
+<script>
+const flocage = document.getElementById("flocage");
+const details = document.getElementById("details-flocage");
+const nom = document.getElementById("nom");
+const numero = document.getElementById("numero");
+const prix = document.getElementById("prix");
+const formulaire = document.getElementById("order-form");
+const recap = document.getElementById("recapitulatif");
+
+function actualiserPrix() {
+  const avecFlocage = flocage.value === "oui";
+
+  details.style.display = avecFlocage ? "block" : "none";
+  nom.required = avecFlocage;
+  numero.required = avecFlocage;
+  prix.textContent = avecFlocage ? "35 €" : "30 €";
+}
+
+flocage.addEventListener("change", actualiserPrix);
+
+formulaire.addEventListener("submit", function(e) {
+  e.preventDefault();
+
+  const avecFlocage = flocage.value === "oui";
+
+  recap.textContent =
+    "RÉCAPITULATIF FOOTSECTOR\n\n" +
+    "Maillot : " + document.getElementById("team").value + "\n" +
+    "Taille : " + document.getElementById("size").value + "\n" +
+    "Flocage : " + (avecFlocage ? "Oui" : "Non") + "\n" +
+    (avecFlocage
+      ? "Nom : " + nom.value + "\nNuméro : " + numero.value + "\n"
+      : "") +
+    "Prix du maillot : " + (avecFlocage ? "35 €" : "30 €") +
+    "\nLivraison : à confirmer";
+
+  recap.style.display = "block";
+});
+
+actualiserPrix();
+</script>
+  <section id="tarifs"><h2>💶 Tarifs</h2><div class="products"><div class="card"><div class="info"><div class="team">Maillot sans flocage</div><div class="price">30 €</div><p>Le maillot seul.</p></div></div><div class="card"><div class="info"><div class="team">Maillot avec flocage</div><div class="price">35 €</div><p>Maillot + flocage.</p></div></div></div><div class="notice">📦 Les frais de livraison et les modalités de commande seront ajoutés dès que tu me donnes les informations définitives.</div></section>
 <section id="contact"><div class="contact"><h2>📲 Commander</h2><p>Les informations de contact et de paiement seront ajoutées ici.</p><a class="btn" href="#">Me contacter</a></div></section>
 <footer><h3>FootSector ⚽</h3><p>Maillots de football • Qualité • Passion</p><div class="legal">Les produits et visuels utilisés sur le site doivent être commercialisés avec les droits et autorisations nécessaires. Les mentions légales, conditions de vente et informations de livraison seront ajoutées avant la mise en ligne commerciale.</div></footer>
 </body></html>
